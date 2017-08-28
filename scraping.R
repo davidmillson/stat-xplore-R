@@ -134,8 +134,8 @@ execute_stat_xplore_POST_call = function(body, allowed_fails = 5) {
                     body = body,
                     use_proxy(Sys.getenv("proxy_address"),
                               as.numeric(Sys.getenv("proxy_port")),
-                              username = Sys.getenv("scots_username"),
-                              password = Sys.getenv("scots_password")))
+                              username = Sys.getenv("proxy_username"),
+                              password = Sys.getenv("proxy_password")))
     ### prints a message to the console to say how many calls are remaining, and
     ### how long until the limit resets
     meta = response %>% headers()
