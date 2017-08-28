@@ -10,19 +10,30 @@ scraping_templates.R gives a few examples of how to actually get something from 
 
 # Getting Started
 Download the project and open it
+  
 Install the packages
+  
 Source schema.R and scraping.R
+  
 See .Renviron section below
+  
 Run build_schema() (takes a couple of minutes)
+  
 Run df = get_scotland_CA_entitled() to see what the results look like
+  
 Experiment/explore to work out how to get the data that you want
 
 # .Renviron
 I keep some sensitive and person specific information in my .Renviron file (this is specific to RStudio. You may need to just edit the information into the code if you aren't using RStudio). This includes my Stat-Xplore API key and proxy settings. To edit the file, run file.edit('~/.Renviron') and just type in the info according to the following template, filling the quotes with the relevant info:
+
 stat_xplore_key = ""
+
 proxy_address = ""
+
 proxy_port = ""
+
 proxy_username = ""
+
 proxy_password = ""
 
 If you aren't on a proxy, or you are but you don't need a username and password for it, I don't know whether you can just leave these blank, or if you need to remove the sections of code. If the latter, it's around line 135 in scraping.R and line 83 in schema.R that you need to look.
