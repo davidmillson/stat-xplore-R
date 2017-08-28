@@ -82,8 +82,8 @@ get_schema = function(url, check_cache = TRUE, filename = "schema/schema.rds") {
                      add_headers(apiKey = Sys.getenv("stat_xplore_key")),
                      use_proxy(Sys.getenv("proxy_address"),
                                as.numeric(Sys.getenv("proxy_port")),
-                               username = Sys.getenv("scots_username"),
-                               password = Sys.getenv("scots_password")))
+                               username = Sys.getenv("proxy_username"),
+                               password = Sys.getenv("proxy_password")))
       ### as in scraping.R, this reports on the api usage and the state of
       ### the user's account limits
       meta = response %>% headers()
