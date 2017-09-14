@@ -132,7 +132,7 @@ execute_stat_xplore_POST_call = function(body, allowed_fails = 5) {
                     add_headers(apiKey = Sys.getenv("stat_xplore_key"),
                     content_type_json(),
                     body = body,
-                    use_proxy(Sys.getenv("proxy_address"),
+                    use_proxy(Sys.getenv("proxy_address")),
                               as.numeric(Sys.getenv("proxy_port")),
                               username = Sys.getenv("proxy_username"),
                               password = Sys.getenv("proxy_password")))
