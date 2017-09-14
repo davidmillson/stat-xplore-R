@@ -16,7 +16,7 @@ scrape_from_stat_xplore = function(body, lookback) {
   ### check if there is an up-to-date cached version
   stat_xplore_cache_key = tryCatch(
     readRDS("cache/stat_xplore_cache_key.rds"),
-    error = function(error)
+    warning = function(warning)
       tibble(filename = integer(0),
              date = numeric(0) %>% as.Date,
              query = character(0)
