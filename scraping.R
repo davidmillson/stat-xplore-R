@@ -18,7 +18,7 @@ scrape_from_stat_xplore = function(body, lookback) {
     readRDS("cache/stat_xplore_cache_key.rds"),
     error = function(error)
       tibble(filename = integer(0),
-             date = numeric(0),
+             date = numeric(0) %>% as.Date,
              query = character(0)
              )
     )
