@@ -128,7 +128,7 @@ execute_stat_xplore_POST_call = function(body, allowed_fails = 5) {
                     ### doing this, but sadly I haven't found it. Here, we've
                     ### got the stat-xplore api key, plus proxy settings for
                     ### accessing the internet through our corporate system
-                    ### (SCOTS), including username and password
+                    ### including username and password
                     add_headers(apiKey = Sys.getenv("stat_xplore_key"),
                     content_type_json(),
                     body = body,
