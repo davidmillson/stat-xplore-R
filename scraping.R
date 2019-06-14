@@ -18,7 +18,7 @@ scrape_from_stat_xplore = function(body, lookback) {
     readRDS("cache/stat_xplore_cache_key.rds"),
     warning = function(warning)
       tibble(filename = integer(0),
-             date = numeric(0) %>% as.Date,
+             date = numeric(0) %>% as.Date(origin = origin),
              query = character(0)
              )
     )
@@ -194,7 +194,7 @@ build_stat_xplore_body = function(database, measures, dimensions, recodes) {
 ### a given valueset and uses a call to the api schema to produce a list of the required
 ### values
 auto_recodes = function(valueset_id) {
-  base_url = "http://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/"
+  base_url = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema/"
   url = base_url %>% str_c(valueset_id %>% str_replace_all(":", "%3A"))
   valueset = get_schema(url)
   list(map = valueset$id %>% as.list())
