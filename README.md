@@ -24,7 +24,7 @@ Run df = get_scotland_CA_entitled() to see what the results look like
 Experiment/explore to work out how to get the data that you want
 
 # .Renviron
-I keep some sensitive and person specific information in my .Renviron file (this is specific to RStudio. You may need to just edit the information into the code if you aren't using RStudio). This includes my Stat-Xplore API key and proxy settings. To edit the file, run file.edit('~/.Renviron') and just type in the info according to the following template, filling the quotes with the relevant info:
+I keep some sensitive and person specific information in my .Renviron file (this is specific to RStudio. You may need to just edit the information into the code if you aren't using RStudio). This includes my Stat-Xplore API key and proxy settings. Bear in mind the risks of keeping user information saved unencrypted in this manner, though. To edit the file, run file.edit('~/.Renviron') and just type in the info according to the following template, filling the quotes with the relevant info:
 
 stat_xplore_key = ""
 
