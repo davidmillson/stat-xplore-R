@@ -13,7 +13,7 @@ build_schema = function(filename = "schema/schema.rds") {
   ### this is the root of the schema
   full_schema = tibble(id = "str:folder:root",
                        label = "Root",
-                       location = "http://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema",
+                       location = "https://stat-xplore.dwp.gov.uk/webapi/rest/v1/schema",
                        type = "FOLDER",
                        parent = "NA")
   saveRDS(full_schema, file = filename)
